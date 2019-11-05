@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFormTestApp.ViewExamples.FlexLayoutExample">
+    
+    <ContentPage.Resources>
+        <Style TargetType="Frame">                      
+            <Setter Property="WidthRequest" Value="120"></Setter>
+            <Setter Property="HeightRequest" Value="150"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="Padding" Value="0,0"></Setter>
+            <Setter Property="HasShadow" Value="False"></Setter>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+            
+        </Style>
+        
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Image Source="rainyGrass.jpg" Aspect="AspectFill" 
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Image>
+            <ScrollView Orientation="Vertical" 
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                <StackLayout>
+                    <FlexLayout Direction="Row" Wrap="Wrap" JustifyContent="SpaceEvenly">
+                        <Frame>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="FlexMenuClicked" CommandParameter="1"></TapGestureRecognizer>
+                            </Frame.GestureRecognizers>
+                            <StackLayout>
+                                <Image Source="JD_cir.png"></Image>
+                                <Label HorizontalTextAlignment="Center" Text="Best"></Label>
+                            </StackLayout>
+                        </Frame>
+                        <Frame>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="FlexMenuClicked" CommandParameter="2"></TapGestureRecognizer>
+                            </Frame.GestureRecognizers>
+                            <StackLayout>
+                                <Image Source="JD_cir.png"></Image>
+                                <Label HorizontalTextAlignment="Center" Text="Day"></Label>
+                            </StackLayout>
+                        </Frame>
+                        <Frame>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="FlexMenuClicked" CommandParameter="3"></TapGestureRecognizer>
+                            </Frame.GestureRecognizers>
+                            <StackLayout>
+                                <Image Source="JD_cir.png"></Image>
+                                <Label HorizontalTextAlignment="Center" Text="Ever"></Label>
+                            </StackLayout>
+                        </Frame>
+                        <Frame>
+                            <StackLayout>
+                                <Image Source="JD_cir.png"></Image>
+                                <Label HorizontalTextAlignment="Center" Text="Here"></Label>
+                            </StackLayout>
+                        </Frame>
+                        <Frame>
+                            <StackLayout>
+                                <Image Source="JD_cir.png"></Image>
+                                <Label HorizontalTextAlignment="Center" Text="You"></Label>
+                            </StackLayout>
+                        </Frame>
+                        <Frame>
+                            <StackLayout>
+                                <Image Source="JD_cir.png"></Image>
+                                <Label HorizontalTextAlignment="Center" Text="Know"></Label>
+                            </StackLayout>
+                        </Frame>
+                        <Frame>
+                            <StackLayout>
+                                <Image Source="JD_cir.png"></Image>
+                                <Label HorizontalTextAlignment="Center" Text="What"></Label>
+                            </StackLayout>
+                        </Frame>
+                        <Frame>
+                            <StackLayout>
+                                <Image Source="JD_cir.png"></Image>
+                                <Label HorizontalTextAlignment="Center" Text="Nah"></Label>
+                            </StackLayout>
+                        </Frame>
+                        <Frame>
+                            <StackLayout>
+                                <Image Source="JD_cir.png"></Image>
+                                <Label HorizontalTextAlignment="Center" Text="Eww"></Label>
+                            </StackLayout>
+                        </Frame>
+         
+                    </FlexLayout>
+                </StackLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

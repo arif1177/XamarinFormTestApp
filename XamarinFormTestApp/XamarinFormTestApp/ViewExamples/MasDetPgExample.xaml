@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFormTestApp.ViewExamples.MasDetPgExample"
+             MasterBehavior="Popover">    
+  <MasterDetailPage.Master>      
+        <ContentPage Title="Master">
+            <StackLayout Padding="10">
+                <Label x:Name="lblPg1" Text="Go to Page 1"></Label>
+                <Label x:Name="lblPg2" Text="Go to Page 2"></Label>
+            </StackLayout>
+        </ContentPage>
+  </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <ContentPage>
+            <ContentPage.Content>
+                <Label Text="Detail page"></Label>
+            </ContentPage.Content>      
+    </ContentPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>

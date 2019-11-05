@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFormTestApp.ViewExamples.TabGridSpinnerForm">
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Entry">
+                <Style.Triggers>
+                    <Trigger TargetType="Entry" Value="0" Property="Text">
+                        <Setter Property="BackgroundColor" Value="Red"></Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <Style TargetType="Label" x:Key="fancyText">
+                <Setter Property="TextColor" Value="Purple"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </TabbedPage.Resources>
+    <TabbedPage.Children>
+        <ContentPage Title="Order">
+            <ScrollView Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                <Grid Padding="10,20" VerticalOptions="Start">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition>
+                            <ColumnDefinition.Width>
+                                <!--Setting width based on different devices. Note: Not perfect as phones can have high res.-->
+                                <OnIdiom x:TypeArguments="GridLength"
+                                    Desktop="6*" Tablet="4*" Phone="2*"></OnIdiom>
+                            </ColumnDefinition.Width>
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                
+                    <Label Text="Product Name: " Style="{x:StaticResource Key=fancyText}" Grid.ColumnSpan="2"></Label>
+                    <Label Text="Sample" Style="{x:StaticResource Key=fancyText}" Grid.Column="2"></Label>
+
+
+                    <Label Text="Product Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." 
+                           Grid.Row="1" Grid.ColumnSpan="3"></Label>
+
+                    <Label Text="Quantity: " Grid.Row="2"></Label>
+                    <Entry Grid.Column="1" Grid.Row="2"></Entry>
+                    <Stepper Grid.Column="2" Grid.Row="2"></Stepper>
+
+                    <Button Text="Order" Clicked="orderBtnClicked" Grid.Row="3" Grid.ColumnSpan="3" HorizontalOptions="Center"></Button>
+                </Grid>
+            </ScrollView>
+        </ContentPage>    
+        <ContentPage Title="History">
+            
+        </ContentPage>
+    </TabbedPage.Children>
+</TabbedPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFormTestApp.ViewExamples.LocalSQLiteDBTest">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Label Text="Quoter Name"/>
+            <Entry x:Name="quoterName"  Placeholder="Enter name"></Entry>
+            <Button Text="Insert Quoter" Clicked="InsertQuoterBtnClicked"></Button>
+
+            <Picker x:Name="quoterPicker" Title="Select a quoter name"></Picker>
+            <Label Text="Quote Text"/>
+            <Entry x:Name="quoteTxt"  Placeholder="Enter quote here"></Entry>
+            <Button Text="Insert Quote" Clicked="InsertQuoteBtnClicked"></Button>
+            
+            <Button Text="View all quotes" Clicked="ViewAllQuotesBtnClicked"></Button>
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
