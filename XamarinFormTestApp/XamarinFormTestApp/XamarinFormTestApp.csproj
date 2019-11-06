@@ -21,6 +21,9 @@
     <Compile Update="ViewExamples\MasDetPgExampleDetailPg1.xaml.cs">
       <DependentUpon>MasDetPgExampleDetailPg1.xaml</DependentUpon>
     </Compile>
+    <Compile Update="ViewExamples\TabbedPageExample_Container.xaml.cs">
+      <DependentUpon>TabbedPageExample_Container.xaml</DependentUpon>
+    </Compile>
     <Compile Update="ViewExamples\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>
@@ -49,6 +52,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewExamples\NativeControlExample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewExamples\TabbedPageExample_Container.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewExamples\TabbedPageExample_pg1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ViewExamples\TabGridSpinnerForm.xaml">

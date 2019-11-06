@@ -23,7 +23,7 @@
     
     <ContentPage.Content>
         <RelativeLayout>
-            <Image Source="rainyGrass.jpg" Aspect="AspectFill" 
+            <Image Source="rainyGrass.jpg" Aspect="AspectFill"
                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
                    RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Image>
             <ScrollView Orientation="Vertical" 

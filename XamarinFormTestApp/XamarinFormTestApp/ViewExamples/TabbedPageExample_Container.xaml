@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:XamarinFormTestApp.ViewExamples"
+             mc:Ignorable="d"
+             x:Class="XamarinFormTestApp.ViewExamples.TabbedPageExample_Container">
+    <local:TabbedPageExample_pg1></local:TabbedPageExample_pg1>
+    <ContentPage Title="Page 2" Icon="baseline_favorite_white_48.png">
+        <ContentPage.Content>
+            <StackLayout>
+                <Label Text="Page 2"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <local:TabbedPageExample_pg1 Title="Page 3"></local:TabbedPageExample_pg1>
+    <ContentPage Title="Page 4" Icon="baseline_favorite_white_48.png">
+        <ContentPage.Content>
+            <StackLayout>
+                <Label Text="Page 4"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+</TabbedPage>

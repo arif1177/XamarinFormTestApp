@@ -18,6 +18,7 @@
                 <Button Text="Local DB test" BackgroundColor="Yellow" Clicked="LocalDBTestBtnClicked"></Button>
                 <Button Text="Master Detail Page" BackgroundColor="Red" Clicked="MasterDetailPgBtnClicked"></Button>
                 <Button Text="Flex Layout"  Clicked="FlexLayoutClicked"></Button>
+                <Button Text="Tabbed Layout"  Clicked="TabbedLayoutClicked"></Button>
             </FlexLayout>
         </ScrollView>
         

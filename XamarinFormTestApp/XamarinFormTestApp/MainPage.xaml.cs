@@ -80,5 +80,13 @@ namespace XamarinFormTestApp
             Navigation.PushAsync(page);
             NavigationPage.SetHasNavigationBar(page,false);
         }
+
+        private void TabbedLayoutClicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Info", "Started Tabbed layout example, no nav bar, parameterised tap gesture handler", "Go");       
+            Page page = new ViewExamples.TabbedPageExample_Container();
+            NavigationPage.SetHasNavigationBar(page, false);
+            Navigation.PushAsync(page);            
+        }
     }
 }
